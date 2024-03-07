@@ -18,10 +18,42 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: url('/assets/rosePattern.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+}
+
+/* navbar */
+.nav-bar {
+  background-image: url('/assets/pink.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your JPG file */
+  background-size: cover;
+}
+
+/* Add this CSS to your stylesheet or component */
+.home-link {
+  position: absolute;
+  top: 0px; /* Adjust the top position to move it down */
+  left: 60px; /* Aligns it with the left side of its container */
+  width: 55px; /* Adjust the width as needed */
+  height: 55px; /* Adjust the height as needed */
+  background-image: url('https://media.discordapp.net/attachments/1129228887486890105/1215089983543713882/Alertfollow1.gif?ex=65fb7bbb&is=65e906bb&hm=e4437440312c1b7c8089f63c7b85a8699b0338862184948ee91d13f6610fa319&='); /* Replace 'your-gif-url.gif' with the actual URL of your gif */
+  background-size: cover;
+  margin-right: auto; /* Pushes it to the far left */
+  margin-bottom: 0px; /* Adjust the margin top to move it down */
+}
+
+.home-link:hover {
+  background-position: 0 50%; /* Change the background position on hover */
+  transform: scale(1.1); /* Adjust the scaling factor for the hover effect */
+}
+
+/* styles.css */
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: 50px; /* Adjust spacing between columns */
+}
+
+.gallery-image-container {
+  margin-bottom: 20px; /* Adjust spacing between rows */
 }
