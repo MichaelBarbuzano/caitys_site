@@ -10,18 +10,23 @@ function Gallery() {
   // Read the contents of the gallery images folder
   const galleryImageNames = fs.readdirSync(galleryImagesPath);
 
+
   return (
     <div className="gallery">
-      <h2>Gallery</h2>
       <div className="image-grid">
+        
         {galleryImageNames.map((imageName, index) => (
+          <div className="pics" key={index}  >
+            <a href={`/gallery_images/${imageName}`} target="_blank" rel="noreferrer">
           <img
             key={index}
             src={`/gallery_images/${imageName}`}
             alt={`Image ${index + 1}`}
             className="gallery-image"
-            style={{ width: '50%', height: '50%' }} // Scale down each image to half of its original size
+            style={{ width: "100%" }}
           />
+          </a>
+          </div>
         ))}
       </div>
     </div>

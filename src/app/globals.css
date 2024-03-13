@@ -18,7 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: url('/assets/rosePattern.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-image: url('/assets/rosePattern.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
   background-size: cover;
   background-position: center;
 }
@@ -46,14 +46,61 @@ body {
   background-position: 0 50%; /* Change the background position on hover */
   transform: scale(1.1); /* Adjust the scaling factor for the hover effect */
 }
-
-/* styles.css */
-.image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: 50px; /* Adjust spacing between columns */
+/* Add this CSS to your stylesheet or component */
+.x-link {
+  position: absolute;
+  top: 8px; /* Adjust the top position to move it down */
+  right: 15px; 
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  background-image: url('https://www.freepnglogos.com/uploads/twitter-x-logo-png/twitter-x-logo-png-9.png'); /* Replace 'your-gif-url.gif' with the actual URL of your gif */
+  background-size: cover;
+  margin-left: auto; /* Pushes it to the far left */
+  margin-bottom: 0px; /* Adjust the margin top to move it down */
 }
 
-.gallery-image-container {
-  margin-bottom: 20px; /* Adjust spacing between rows */
+.x-link:hover {
+  background-position: 0 50%; /* Change the background position on hover */
+  transform: scale(1.1); /* Adjust the scaling factor for the hover effect */
 }
+
+/* Add this CSS to your stylesheet or component */
+.insta-link {
+  position: absolute;
+  top: 8px; /* Adjust the top position to move it down */
+  right: 65px; 
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png'); /* Replace 'your-gif-url.gif' with the actual URL of your gif */
+  background-size: cover;
+  margin-left: auto; /* Pushes it to the far left */
+  margin-bottom: 0px; /* Adjust the margin top to move it down */
+}
+
+.insta-link:hover {
+  background-position: 0 50%; /* Change the background position on hover */
+  transform: scale(1.1); /* Adjust the scaling factor for the hover effect */
+}
+
+.gallery{
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+  padding: 0px;
+}
+.gallery .pics{
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.gallery .pics:hover{
+  filter: opacity(.8);
+
+}
+
+
+

@@ -14,6 +14,17 @@ function NavBar() {
         <a href="/characters" className="text-white ml-4">Characters</a>
         <a href="/comic" className="text-white ml-4">Comic</a>
       </div>
+
+      <div className="x">
+      {/* Using the anchor element with background image */}
+
+      <a href="https://twitter.com/PlayfulPetals" className="x-link" target="_blank"></a>
+      </div>
+      <div className="insta">
+      {/* Using the anchor element with background image */}
+
+      <a href="https://www.instagram.com/primrosexvt/" className="insta-link" target="_blank"></a>
+      </div>
     </nav>
   );
 }
