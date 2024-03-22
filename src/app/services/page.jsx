@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import NavBar from '../components/navbar'; // Import the NavBar component
+import Card from '../components/Card';
 
 export default function Services() {
   return (
@@ -19,57 +20,8 @@ export default function Services() {
         />
         <h1 className="text-4xl font-bold text-center mb-8 z-10">Services</h1>
 
-        {/* Listing services */}
-        <div className="grid grid-cols-3 gap-20 relative mt-56 p-5">
-          {/* Service cards */}
-          <div className="relative ">
-            <Image
-              src="/assets/serviceCard.png"
-              alt="Service Card 1"
-              width={2400}
-              height={100}
-            />
-            <a href="/about">
-            <Image
-              src="/assets/buyButton.png"
-              alt="Buy Button 1"
-              width={2400}
-              height={100}
-              className="-mt-52" // Add negative margin-top to move the button closer to the image
-            />
-            </a>
-          </div>
-          <div className="relative ">
-            <Image
-              src="/assets/serviceCard.png"
-              alt="Service Card 2"
-              width={2400}
-              height={100}
-            />
-            <Image
-              src="/assets/buyButton.png"
-              alt="Buy Button 1"
-              width={2400}
-              height={100}
-              className="-mt-52" // Add negative margin-top to move the button closer to the image
-            />
-          </div>
-          <div className="relative">
-            <Image
-              src="/assets/serviceCard.png"
-              alt="Service Card 3"
-              width={2400}
-              height={100}
-            />
-            <Image
-              src="/assets/buyButton.png"
-              alt="Buy Button 1"
-              width={2400}
-              height={100}
-              className="-mt-52" // Add negative margin-top to move the button closer to the image
-            />
-          </div>
-        </div>
+        {/* Listing services <Card />*/}
+        <Card />
       </div>
     </div>
   );
