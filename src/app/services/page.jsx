@@ -12,7 +12,7 @@ export default function Services() {
       {/* Images and text */}
       <div className="background-container relative">
         <Image
-          src="/assets/services.png"
+          src="/assets/train.png"
           alt="Background Image"
           layout="fill"
           objectFit="cover"
