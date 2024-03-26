@@ -80,6 +80,8 @@ jobs:
         with:
           name: nextjs-app
           path: .next
+          run: npm run dev
+        
 
   # Deployment job
   deploy:
