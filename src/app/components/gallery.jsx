@@ -3,7 +3,6 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import '../globals.css';
-import Image from 'next/image';
 
 function Gallery() {
   // Get the path to the gallery images folder
@@ -18,20 +17,23 @@ function Gallery() {
       <div>
       <div className="gallery">
       <div className="image-grid">
-      {[...Array(10)].map((_, index) => (
-          <div className="pics" key={index}>
-            <Image
-              src="/assets/card1.png"
-              alt={`Service Card ${index + 1}`}
-              width={2400}
-              height={100}
-            />
+        {galleryImageNames.map((imageName, index) => (
+          <div className="pics" key={index}  >
+            <a href={`/gallery_images/${imageName}`} target="_blank" rel="noreferrer">
+          <img
+            key={index}
+            src={`/gallery_images/${imageName}`}
+            alt={`Image ${index + 1}`}
+            className="gallery-image"
+            style={{ width: "100%" }}
+          />
+          </a>
           </div>
         ))}
-          </div>
         </div>
         </div>
       </div>
+    </div>
   );
 }
 
