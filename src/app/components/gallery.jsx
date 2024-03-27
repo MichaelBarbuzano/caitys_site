@@ -15,8 +15,7 @@ function Gallery() {
   return (
     <div>
       <div>
-      <div className="gallery">
-      <div className="image-grid">
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '16px' }}>
         {galleryImageNames.map((imageName, index) => (
           <div className="pics" key={index}  >
             <a href={`/gallery_images/${imageName}`} target="_blank" rel="noreferrer">
@@ -30,7 +29,6 @@ function Gallery() {
           </a>
           </div>
         ))}
-        </div>
         </div>
       </div>
     </div>
