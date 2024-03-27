@@ -12,24 +12,32 @@ function Gallery() {
   const galleryImageNames = fs.readdirSync(galleryImagesPath);
 
 
+  const columnData = [[], [], [], [], []];
+
+  // Distribute images evenly across columns
+  galleryImageNames.forEach((imageName, index) => {
+    const columnIndex = index % 5; // Distribute images into 5 columns
+    columnData[columnIndex].push(imageName);
+  });
+
   return (
     <div>
-      <div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '16px' }}>
-        {galleryImageNames.map((imageName, index) => (
-          <div className="pics" key={index}  >
+      {columnData.map((columnImages, columnIndex) => (
+        <div key={columnIndex} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          {columnImages.map((imageName, index) => (
             <a href={`/gallery_images/${imageName}`} target="_blank" rel="noreferrer">
           <img
             key={index}
             src={`/gallery_images/${imageName}`}
             alt={`Image ${index + 1}`}
             className="gallery-image"
-            style={{ width: "100%" }}
+            style={{ width: "100%"}}
           />
           </a>
-          </div>
+          ))}
+          </div> 
         ))}
-        </div>
       </div>
     </div>
   );
