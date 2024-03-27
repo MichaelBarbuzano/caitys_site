@@ -12,8 +12,8 @@ function Gallery() {
 
 
   return (
-    <div className="gallery">
-      <div className="image-grid">
+    <div>
+      <div>
         
         {galleryImageNames.map((imageName, index) => (
           <div className="pics" key={index}  >

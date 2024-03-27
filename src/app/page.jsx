@@ -10,11 +10,14 @@ export default function Home() {
       {/*Navigation bar */}
       <NavBar /> 
       <main className="container mx-auto mt-8">
-        <h1 className="text-3xl font-bold mb-4 flex justify-center">Homepage</h1>
         
       </main>
       {/* Include the Gallery component */}
+      <div className="gallery">
+      <div className="image-grid">
       <Gallery /> 
+      </div>
+      </div>
     </div>
   );
 }
