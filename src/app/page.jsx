@@ -9,15 +9,9 @@ export default function Home() {
     <div>
       {/*Navigation bar */}
       <NavBar /> 
-      <main className="container mx-auto mt-8">
-        
-      </main>
       {/* Include the Gallery component */}
-      <div className="gallery">
-      <div className="image-grid">
       <Gallery /> 
-      </div>
-      </div>
+
     </div>
   );
 }

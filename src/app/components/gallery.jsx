@@ -2,6 +2,7 @@
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
+import '../globals.css';
 
 function Gallery() {
   // Get the path to the gallery images folder
@@ -14,7 +15,8 @@ function Gallery() {
   return (
     <div>
       <div>
-        
+      <div className="gallery">
+      <div className="image-grid">
         {galleryImageNames.map((imageName, index) => (
           <div className="pics" key={index}  >
             <a href={`/gallery_images/${imageName}`} target="_blank" rel="noreferrer">
@@ -23,11 +25,13 @@ function Gallery() {
             src={`/gallery_images/${imageName}`}
             alt={`Image ${index + 1}`}
             className="gallery-image"
-            style={{ width: "20%" }}
+            style={{ width: "100%" }}
           />
           </a>
           </div>
         ))}
+        </div>
+        </div>
       </div>
     </div>
   );
