@@ -31,35 +31,35 @@ const requestPage = () => {
     setEmail(event.target.value);
   };
   const handleSubmit = async () => {
-    const corsProxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    const mailjetApiUrl = 'https://api.mailjet.com/v3.1/send';
-    const apiKey = '538e13fbfb551c395fd24ef4b2f5422b';
-    const apiSecret = '2def79d8eae16dc4bdfcdee12bf5aad3';
-    const request = fetch(mailjetApiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Basic ${Buffer.from(apiKey + ':' + apiSecret).toString('base64')}`,
-      },
-      body: JSON.stringify({
-        Messages: [
-          {
-            From: {
-              Email: 'primrosevt@primrosevt.com',
-              Name: 'Your Name',
-            },
-            To: [
-              {
-                Email: 'primrosevt@primrosevt.com',
-                Name: 'Recipient Name',
-              },
-            ],
-            Subject: 'Test Email from Mailjet and React',
-            TextPart: 'This is a test email sent from Mailjet using React.',
+    const request = mailjetClient
+    .post("send", {'version': 'v3.1'})
+    .request({
+      "Messages":[
+        {
+          "From": {
+            "Email": "primrosevt@primrosevt.com",
+            "Name": "Michael"
           },
-        ],
-      }),
-    });
+          "To": [
+            {
+              "Email": "primrosevt@primrosevt.com",
+              "Name": "Michael"
+            }
+          ],
+          "Subject": "Greetings from Mailjet.",
+          "TextPart": "My first Mailjet email",
+          "HTMLPart": "<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!",
+          "CustomID": "AppGettingStartedTest"
+        }
+      ]
+    })
+    request
+      .then((result) => {
+        console.log(result.body)
+      })
+      .catch((err) => {
+        console.log(err.statusCode)
+      });
   
     try {
       const result = await request;
