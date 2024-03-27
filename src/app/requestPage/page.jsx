@@ -35,7 +35,7 @@ const requestPage = () => {
     const mailjetApiUrl = 'https://api.mailjet.com/v3.1/send';
     const apiKey = '538e13fbfb551c395fd24ef4b2f5422b';
     const apiSecret = '2def79d8eae16dc4bdfcdee12bf5aad3';
-    const request = fetch(corsProxyUrl + mailjetApiUrl, {
+    const request = fetch(mailjetApiUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
