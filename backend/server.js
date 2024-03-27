@@ -25,7 +25,7 @@ app.post('/send-email', async (req, res) => {
               },
               To: [
                 {
-                  Email: 'caitcashwell@gmail.com',
+                  Email: 'michaelbarbuzano@gmail.com',
                   Name: 'Michael',
                 },
               ],
