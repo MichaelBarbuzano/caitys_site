@@ -23,7 +23,7 @@ function Gallery() {
             src={`/gallery_images/${imageName}`}
             alt={`Image ${index + 1}`}
             className="gallery-image"
-            style={{ width: "100%" }}
+            style={{ width: "20%" }}
           />
           </a>
           </div>
