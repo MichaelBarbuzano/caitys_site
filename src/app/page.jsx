@@ -10,6 +10,7 @@ export default function Home() {
       {/*Navigation bar */}
       <NavBar /> 
       {/* Include the Gallery component */}
+      
       <Gallery /> 
 
     </div>
