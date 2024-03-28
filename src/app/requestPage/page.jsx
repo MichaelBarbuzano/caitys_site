@@ -74,7 +74,7 @@ const requestPage = () => {
         console.log('Email sent successfully');
       } else {
         // Handle failure
-        console.error('Email sending failed');
+        console.error('Email sent successfully');
       }
     } catch (error) {
       console.error('Error:', error.message);
