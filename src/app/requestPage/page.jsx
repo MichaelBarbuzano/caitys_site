@@ -33,30 +33,33 @@ const requestPage = () => {
       const mailjetApiKey = '538e13fbfb551c395fd24ef4b2f5422b';
       const mailjetApiSecret = '2def79d8eae16dc4bdfcdee12bf5aad3';
   
-      const response = await fetch('https://prim-1ed6100f7f0f.herokuapp.com/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          apiKey: mailjetApiKey,
-          apiSecret: mailjetApiSecret,
-          emailData: {
-            From: {
-              Email: 'michaelbarbuzano2@yahoo.com',
-              Name: 'Your Name',
-            },
-            To: [
-              {
-                Email: 'michaelbarbuzano2@yahoo.com',
-                Name: 'Recipient Name',
-              },
-            ],
-            Subject: 'Test Email from Mailjet and React',
-            TextPart: `Description: ${description}`,
+      const response = await fetch('http://localhost:5000/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        description: description,
+        email: email,
+        apiKey: mailjetApiKey,
+        apiSecret: mailjetApiSecret,
+        emailData: {
+          From: {
+            Email: 'michaelbarbuzano2@yahoo.com',
+            Name: 'Your Name',
           },
-        }),
-      });
+          To: [
+            {
+              Email: 'michaelbarbuzano2@yahoo.com',
+              Name: 'Recipient Name',
+            },
+          ],
+          Subject: `Commission Email from ${email}`,
+          TextPart: `Description: ${description}`,
+        },
+        // Include description and email values in the request body
+      }),
+    });
   
       if (!response.ok) {
         throw new Error(`Failed to fetch: ${response.statusText}`);
