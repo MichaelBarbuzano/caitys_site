@@ -30,6 +30,7 @@ function Gallery() {
           <img
             key={index}
             src={`/gallery_images/${imageName}`}
+            loading="lazy"
             alt={`Image ${index + 1}`}
             className="gallery-image"
             style={{ width: "100%"}}
