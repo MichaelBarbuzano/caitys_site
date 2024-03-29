@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "blurhash": "^2.0.5",
     "next": "13.5.6",
     "next-navigation": "^1.0.6",
     "node-fetch": "^3.3.2",
     "node-mailjet": "^6.0.5",
     "react": "^18",
+    "react-blurhash": "^0.3.0",
     "react-dom": "^18",
+    "react-lazy-load-image-component": "^1.6.0",
     "webpack-node-externals": "^3.0.0"
   },
   "devDependencies": {

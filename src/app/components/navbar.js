@@ -3,7 +3,7 @@ import React from 'react';
 
 function NavBar() {
   return (
-    <nav className="nav-bar bg-gray-800 p-4">
+    <nav className="nav-bar p-4">
       <div className="home">
         {/* Using the anchor element with background image */}
         <a href="/" className="home-link"></a>
