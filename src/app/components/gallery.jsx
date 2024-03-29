@@ -69,9 +69,8 @@ function Gallery() {
                 <LazyLoadImage
                   key={index}
                   src={`/gallery_images/${imageName}`}
-                  loading="lazy"
                   className="gallery-image"
-                  placeholderSrc="placeholder.jpg"
+                  placeholderSrc="/gallery_images/placeholder.jpg"
                   style={{ width: "100%" }}
                 />
               </a>
