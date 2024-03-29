@@ -7,20 +7,43 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 // Define an array of image names
 const galleryImageNames = [
   'a.png',
-  'a.png',
-  'a.png',
-  'a.png',
-  'a.png',
-  'a.png',
-  'a.png',
-  'a.png',
-  'a.png',
-  'a.png',
-  'a.png',
-  'a.png',
-  'a.png',
-  'a.png',
-  'a.png',
+  'abcIMG_0790.png',
+   'abIMG_0339.png',
+'IMG_0001.png',
+'IMG_0004.png',
+'IMG_0022.png',
+'IMG_0099.png',
+'IMG_0327.png',
+'IMG_0339.png',
+'IMG_0400.png',
+'IMG_0401.png',
+'IMG_0432.png',
+'IMG_0468.png',
+'IMG_0509.png',
+'IMG_0512.png',
+'IMG_0548.png',
+'IMG_0555.png',
+'IMG_0573.png',
+'IMG_0583.png',
+'IMG_0589.png',
+'IMG_0594.png',
+'IMG_0622.png',
+'IMG_0629.png',
+'IMG_0637.png',
+'IMG_0641.png',
+'IMG_0645.png',
+ 'IMG_0648.png',
+  'IMG_0657.png',
+   'IMG_0659.png',
+    'IMG_0665.png',
+     'IMG_0679.png',
+      'IMG_0719.png',
+       'IMG_0743.png',
+        'IMG_0744.png',
+         'IMG_0767.png',
+          'IMG_0769.png',
+           'IMG_0770.png',
+            'rosePattern.png',
   // Add more image names as needed
 ];
 
@@ -48,6 +71,7 @@ function Gallery() {
                   src={`/gallery_images/${imageName}`}
                   loading="lazy"
                   className="gallery-image"
+                  placeholderSrc="placeholder.jpg"
                   style={{ width: "100%" }}
                 />
               </a>
