@@ -49,7 +49,6 @@ function Gallery() {
                   loading="lazy"
                   className="gallery-image"
                   style={{ width: "100%" }}
-                  effect="blur"
                 />
               </a>
             ))}
