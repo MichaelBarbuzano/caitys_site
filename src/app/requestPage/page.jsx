@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import NavBar from '../components/navbar'; // Import the NavBar component
-
+import Image from 'next/image';
 
 
 const requestPage = () => {
@@ -9,6 +9,7 @@ const requestPage = () => {
   const [value, setValue] = useState(null);
   const [description, setDescription] = useState('');
   const [email, setEmail] = useState('');
+  const [discordID, setDiscordID] = useState('');
 
   useEffect(() => {
     // Parse the query parameters from the URL
@@ -27,6 +28,9 @@ const requestPage = () => {
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
+  };
+  const handleDiscordIDChange = (event) => {
+    setDiscordID(event.target.value);
   };
   const handleSubmit = async () => {
     try {
@@ -54,7 +58,7 @@ const requestPage = () => {
               Name: 'Recipient Name',
             },
           ],
-          Subject: `Commission Email from ${email}`,
+          Subject: `Commission Email from Email: ${email}, Discord ID: ${discordID}`,
           TextPart: `Description: ${description}`,
         },
         // Include description and email values in the request body
@@ -86,16 +90,66 @@ const requestPage = () => {
       {/* Your page content */}
       <h1 className="text-4xl font-bold text-center mb-8 z-10">Services</h1>
       <div style = {{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-      <p>Integer Value: {value}</p>
       <select value={value} onChange={handleSelectChange} style={{ backgroundColor: 'white', color: 'black', border: '1px solid white' }}>
-        <option value="1">Commission Number 1</option>
-        <option value="2">Commission Number 2</option>
-        <option value="3">Commission Number 3</option>
+        <option value="1">Custom Icon And Banner</option>
+        <option value="2">Character Illustration</option>
+        <option value="3">V-Tuber Creation</option>
       </select>
-      <p>Description:</p> 
-      <input type="text" value={description} onChange={handleDescriptionChange} placeholder="Enter description" style={{ backgroundColor: 'white', color: 'black', border: '1px solid white' }} />
+      {value === "1" && (
+    <Image
+      src="/assets/card1.png"
+      alt="Service Card 1"
+      width={400}
+      height={100}
+      style={{ paddingTop: '10px' }} // Add padding to the top of the image
+    />
+  )}
+  {value === "2" && (
+    <Image
+      src="/assets/card2.png"
+      alt="Service Card 2"
+      width={400}
+      height={100}
+      style={{ paddingTop: '10px' }} // Add padding to the top of the image
+    />
+  )}
+  {value === "3" && (
+    <Image
+      src="/assets/card3.png"
+      alt="Service Card 3"
+      width={400}
+      height={100}
+      style={{ paddingTop: '10px' }} // Add padding to the top of the image
+    />
+  )}
       <p>Email Address:</p> 
-      <input type="text" value={email} onChange={handleEmailChange} placeholder="Enter email" style={{ backgroundColor: 'white', color: 'black', border: '1px solid white' }} />
+      <input type="text" value={email} onChange={handleEmailChange} placeholder="Enter email" style={{ 
+        backgroundColor: 'white', color: 'black', border: '1px solid white' }} />
+        <p>Discord ID (Optional):</p> 
+      <input type="text" value={discordID} onChange={handleDiscordIDChange} placeholder="Enter discord ID" style={{ 
+        backgroundColor: 'white', color: 'black', border: '1px solid white' }} />
+      <p>Description:</p> 
+      <div style={{ width: '100%', maxWidth: '550px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center'  }}>
+  <textarea
+    id="description"
+    value={description}
+    onChange={handleDescriptionChange}
+    placeholder="Enter description"
+    style={{
+      backgroundColor: 'white',
+      color: 'black',
+      border: '1px solid white',
+      resize: 'vertical', // Allow vertical resizing
+      minHeight: '200px', // Set minimum height
+      paddingTop: '8px', // Adjust padding for text to start from top left
+      width: '100%', // Adjust width to fill its parent container
+      boxSizing: 'border-box', // Include padding and border in the width calculation
+
+    }}
+  />
+  </div>
+</div>
       <button onClick={handleSubmit}> Submit</button>
     </div>
     </div>
