@@ -18,7 +18,7 @@ export default function Services() {
           objectFit="cover"
           objectPosition="center bottom"
         />
-        <h1 className="text-4xl font-bold text-center mb-8 z-10">Services</h1>
+        <h1 className="text-4xl font-bold text-center mb-8 z-10 text-red-500">-</h1>
 
         {/* Listing services <Card />*/}
         <Card />
