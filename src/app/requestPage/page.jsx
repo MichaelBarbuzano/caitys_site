@@ -88,7 +88,7 @@ const requestPage = () => {
     <div>
       <NavBar /> {/* Include the NavBar component */}
       {/* Your page content */}
-      <h1 className="text-4xl font-bold text-center mb-8 z-10">Services</h1>
+      <h1 className="text-4xl font-bold text-center mb-8 z-10"></h1>
       <div style = {{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
       <select value={value} onChange={handleSelectChange} style={{ backgroundColor: 'white', color: 'black', border: '1px solid white' }}>
         <option value="1">Custom Icon And Banner</option>

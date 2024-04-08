@@ -21,10 +21,10 @@ body {
 .home-link {
   position: absolute;
   top: 0px; /* Adjust the top position to move it down */
-  left: 60px; /* Aligns it with the left side of its container */
+  left: 15px; /* Aligns it with the left side of its container */
   width: 55px; /* Adjust the width as needed */
   height: 55px; /* Adjust the height as needed */
-  background-image: url(/assets/FollowAlert.gif); /* Replace 'your-gif-url.gif' with the actual URL of your gif */
+  background-image: url(/assets/Primcon2.png); /* Replace 'your-gif-url.gif' with the actual URL of your gif */
   background-size: cover;
   margin-right: auto; /* Pushes it to the far left */
   margin-bottom: 0px; /* Adjust the margin top to move it down */
