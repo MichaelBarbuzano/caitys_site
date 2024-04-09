@@ -7,4 +7,4 @@ module.exports = withOptimizedImages({
     handleImages: ['jpeg', 'png'], // Specify which image types to handle
     /* Other configuration options here */
     
-  });
+  }); 
