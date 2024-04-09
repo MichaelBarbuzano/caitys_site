@@ -34,8 +34,7 @@ const requestPage = () => {
   };
   const handleSubmit = async () => {
     try {
-      const mailjetApiKey = '538e13fbfb551c395fd24ef4b2f5422b';
-      const mailjetApiSecret = '2def79d8eae16dc4bdfcdee12bf5aad3';
+
   
       const response = await fetch('https://prim-1ed6100f7f0f.herokuapp.com/send-email', {
       method: 'POST',
@@ -45,8 +44,6 @@ const requestPage = () => {
       body: JSON.stringify({
         description: description,
         email: email,
-        apiKey: mailjetApiKey,
-        apiSecret: mailjetApiSecret,
         emailData: {
           From: {
             Email: 'michaelbarbuzano2@yahoo.com',

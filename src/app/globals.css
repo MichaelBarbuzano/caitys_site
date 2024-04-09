@@ -17,17 +17,21 @@ body {
   background-position: center;
 }
 
-/* Add this CSS to your stylesheet or component */
 .home-link {
   position: absolute;
-  top: 0px; /* Adjust the top position to move it down */
+  top: 10px; /* Adjust the top position to move it down */
   left: 15px; /* Aligns it with the left side of its container */
-  width: 55px; /* Adjust the width as needed */
-  height: 55px; /* Adjust the height as needed */
-  background-image: url(/assets/Primcon2.png); /* Replace 'your-gif-url.gif' with the actual URL of your gif */
-  background-size: cover;
+  width: 36px; /* Adjust the width as needed */
+  height: 36px; /* Adjust the height as needed */
+  background-image: none; /* Remove the background image */
   margin-right: auto; /* Pushes it to the far left */
   margin-bottom: 0px; /* Adjust the margin top to move it down */
+}
+
+.home-link img {
+  width: 125%; /* Ensure the image takes up the entire space of its container */
+  height: 125%; /* Ensure the image takes up the entire space of its container */
+  object-fit: cover; /* Maintain the aspect ratio of the image */
 }
 
 .home-link:hover {
