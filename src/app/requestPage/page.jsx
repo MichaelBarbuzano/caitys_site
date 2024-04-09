@@ -10,6 +10,18 @@ const requestPage = () => {
   const [description, setDescription] = useState('');
   const [email, setEmail] = useState('');
   const [discordID, setDiscordID] = useState('');
+  const [showMessage, setShowMessage] = useState(false);
+  const confirmationRef = React.useRef(null);
+
+  useEffect(() => {
+    if (showMessage && confirmationRef.current) {
+      // Scroll down a set amount (e.g., 100 pixels)
+      window.scrollTo({
+        top: window.pageYOffset + 100,
+        behavior: 'smooth',
+      });
+    }
+  }, [showMessage]);
 
   useEffect(() => {
     // Parse the query parameters from the URL
@@ -33,6 +45,8 @@ const requestPage = () => {
     setDiscordID(event.target.value);
   };
   const handleSubmit = async () => {
+    setShowMessage(true);
+      // Scroll just below the confirmation message
     try {
 
   
@@ -148,6 +162,11 @@ const requestPage = () => {
   </div>
 </div>
       <button onClick={handleSubmit}> Submit</button>
+      {showMessage && (
+        <p ref={confirmationRef} style={{ color: 'green' }}>
+          Commission Request Sent Successfully
+        </p>
+      )}
     </div>
     </div>
   );
