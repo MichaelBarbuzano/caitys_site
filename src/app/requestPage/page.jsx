@@ -161,9 +161,9 @@ const requestPage = () => {
   />
   </div>
 </div>
-      <button onClick={handleSubmit}> Submit</button>
+      <button onClick={handleSubmit} style={{ marginTop: '5px' }}> <img src="/assets/submit.png" alt="Description of your image" style={{ width: '100px', height: '50px' }}></img></button>
       {showMessage && (
-        <p ref={confirmationRef} style={{ color: 'green' }}>
+        <p ref={confirmationRef} style={{ color: 'lightgreen' }}>
           Commission Request Sent Successfully
         </p>
       )}
