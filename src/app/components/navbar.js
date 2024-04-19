@@ -3,13 +3,13 @@ import React from 'react';
 
 function NavBar() {
   return (
-    <nav className="nav-bar p-4">
+    <nav className="nav-bar p-4 flex flex-wrap justify-center items-center">
       <div className="home">
         {/* Using the anchor element with background image */}
         <a href="/" className="home-link"><img src="/assets/Primcon4.png" alt="Description of your image"></img></a>
         
       </div>
-      <div className="container mx-auto flex justify-center" style={{ fontSize: '25px', fontFamily: 'impact, sans-serif', textShadow: '0 0 3px pink' }}>
+      <div className="container mx-auto flex justify-center" style={{ fontSize: '20px', fontFamily: 'impact, sans-serif', textShadow: '0 0 3px pink' }}>
         <a href="/services" className="text-white ml-4">Services</a>
         <a href="/characters" className="text-white ml-4">Characters</a>
         <a href="/webtoon" className="text-white ml-4">Webtoon</a>
