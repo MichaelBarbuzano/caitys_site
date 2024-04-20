@@ -6,7 +6,7 @@ function NavBar() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust the threshold as needed for mobile screens
+      setIsMobile(window.innerWidth <= 520); // Adjust the threshold as needed for mobile screens
     };
         // Add event listener for window resize
         window.addEventListener('resize', handleResize);

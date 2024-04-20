@@ -53,7 +53,7 @@ const Card = ({ imageSrc, title, content, integerValue}) => {
     </div>
     <div className="relative ">
       <Image
-        src="/assets/card3.png"
+        src="/assets/card3.jpg"
         alt="Service Card 1"
         width={2400}
         height={100}
