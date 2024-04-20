@@ -108,7 +108,7 @@ const requestPage = () => {
       </select>
       {value === "1" && (
     <Image
-      src="/assets/card1.png"
+      src="/assets/card1.jpg"
       alt="Service Card 1"
       width={400}
       height={100}
@@ -117,7 +117,7 @@ const requestPage = () => {
   )}
   {value === "2" && (
     <Image
-      src="/assets/card2.png"
+      src="/assets/card2.jpg"
       alt="Service Card 2"
       width={400}
       height={100}
@@ -126,7 +126,7 @@ const requestPage = () => {
   )}
   {value === "3" && (
     <Image
-      src="/assets/card3.png"
+      src="/assets/card3.jpg"
       alt="Service Card 3"
       width={400}
       height={100}
