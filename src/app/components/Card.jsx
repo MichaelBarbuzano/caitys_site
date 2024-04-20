@@ -15,7 +15,7 @@ const Card = ({ imageSrc, title, content, integerValue}) => {
         <div className="grid grid-cols-3 gap-10 relative mt-40 p-5">
       <div className="relative ">
       <Image
-        src="/assets/card1.png"
+        src="/assets/card1.jpg"
         alt="Service Card 1"
         width={2400}
         height={100}
@@ -34,7 +34,7 @@ const Card = ({ imageSrc, title, content, integerValue}) => {
     </div>
     <div className="relative ">
       <Image
-        src="/assets/card2.png"
+        src="/assets/card2.jpg"
         alt="Service Card 1"
         width={2400}
         height={100}

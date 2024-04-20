@@ -1,7 +1,22 @@
-// NavBar.js
-import React from 'react';
+'use client'
+import React, { useState, useEffect } from 'react';
 
 function NavBar() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the threshold as needed for mobile screens
+    };
+        // Add event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        // Initial check for mobile view
+        handleResize();
+    
+        // Cleanup on component unmount
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
   return (
     <nav className="nav-bar p-4 flex flex-wrap justify-center items-center">
       <div className="home">
@@ -15,16 +30,14 @@ function NavBar() {
         <a href="/webtoon" className="text-white ml-4">Webtoon</a>
       </div>
 
-      <div className="x">
-      {/* Using the anchor element with background image */}
-
-      <a href="https://twitter.com/PlayfulPetals" className="x-link" target="_blank"></a>
-      </div>
-      <div className="insta">
-      {/* Using the anchor element with background image */}
-
-      <a href="https://www.instagram.com/primrosexvt/" className="insta-link" target="_blank"></a>
-      </div>
+      
+      {!isMobile && (
+        <div className="social-icons flex justify-center mt-4">
+          {/* Using the anchor element with background image */}
+          <a href="https://twitter.com/PlayfulPetals" className="x-link" target="_blank"></a>
+          <a href="https://www.instagram.com/primrosexvt/" className="insta-link ml-4" target="_blank"></a>
+        </div>
+      )}
     </nav>
   );
 }
