@@ -38,6 +38,13 @@ function NavBar() {
           <a href="https://www.instagram.com/primrosexvt/" className="insta-link ml-4" target="_blank"></a>
         </div>
       )}
+      {isMobile && (
+        <div className="social-icons flex justify-end mt-4">
+          {/* Using smaller versions of the social icons for mobile */}
+          <a href="https://twitter.com/PlayfulPetals" className="x-link" target="_blank"style={{ marginRight: '-15px', marginTop: '28px', width: '25px', height: '25px' }}></a>
+          <a href="https://www.instagram.com/primrosexvt/" className="insta-link ml-4" target="_blank" style={{ marginRight: '-40px', marginTop: '28px', width: '25px', height: '25px' }}></a>
+        </div>
+      )}
     </nav>
   );
 }
