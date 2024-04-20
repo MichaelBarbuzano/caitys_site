@@ -10,7 +10,7 @@ export default function webtoon() {
       {/* Your page content */}
       <div className="relative ">
       <Image
-        src="/assets/comingSoon.png"
+        src="/assets/comingSoon.jpg"
         alt="Service Card 1"
         width={2000}
         height={100}
