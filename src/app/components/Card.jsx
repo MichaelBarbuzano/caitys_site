@@ -22,13 +22,6 @@ const Card = ({ imageSrc, title, content, integerValue}) => {
       />
       <div>
       <Link href={`/requestPage?v=${1}`}>
-      <Image
-        src="/assets/buyButton2.png"
-        alt="Buy Button 1"
-        width={2400}
-        height={100}
-        className="-mt-0" // Add negative margin-top to move the button closer to the image
-      />
       </Link>
       </div>
     </div>
@@ -41,13 +34,6 @@ const Card = ({ imageSrc, title, content, integerValue}) => {
       />
       <div>
       <Link href={`/requestPage?v=${2}`}>
-      <Image
-        src="/assets/buyButton2.png"
-        alt="Buy Button 1"
-        width={2400}
-        height={100}
-        className="-mt-0" // Add negative margin-top to move the button closer to the image
-      />
       </Link>
       </div>
     </div>
@@ -60,13 +46,6 @@ const Card = ({ imageSrc, title, content, integerValue}) => {
       />
       <div>
       <Link href={`/requestPage?v=${3}`}>
-      <Image
-        src="/assets/buyButton2.png"
-        alt="Buy Button 1"
-        width={2400}
-        height={100}
-        className="-mt-0" // Add negative margin-top to move the button closer to the image
-      />
       </Link>
       </div>
     </div>
